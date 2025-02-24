@@ -1,0 +1,75 @@
+.one{
+    background-image: url("https://wallpapercave.com/wp/wp3572129.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.two{
+    background: #000000af;
+}
+.para{
+    color: rgb(23, 79, 79);
+    font-weight: 800;
+}
+.colo{
+    background: rgb(186, 237, 239);
+}
+.mains{
+    background-image: url('https://pixy.org/src2/657/thumbs350/6579010.jpg');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0px;
+    margin: 0px;
+}
+.main{
+    background-image: url('https://wallpaperaccess.com/full/4396574.jpg');
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+}
+.on{
+    background-image: url('https://wallpapercave.com/wp/wp2928379.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    position: sticky;
+    top: 0px;
+
+}
+.off{
+    background-image: url('https://farmhacker.com/wp-content/uploads/2020/03/beautiful-red-barn-next-to-a-brown-fence-and-green-trees-farm-background-wallpaper-pictures.jpg');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+
+
+}
+.not{
+    background-image: url('https://images.saymedia-content.com/.image/t_share/MTkyOTkyMzE2OTQ3MDQ3NjQ1/website-background-templates.png');
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    padding-bottom: 50px;
+
+}
+.rain{
+    background-image: url('https://i2.wp.com/startupbizglobal.com/wp-content/uploads/beef-cattle-ranching-farming.jpg?fit=1280%2C774&ssl=1');
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: repeat;
+    overflow: scroll;
+
+
+}
+.onn{
+    background:rgb(28, 28, 106);
+}
+.onon{
+    overflow: scroll;
+}
+
