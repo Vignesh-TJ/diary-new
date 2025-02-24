@@ -3,7 +3,6 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Adminheader from '../components/Adminheader';
-import Monthlysales from '../components/monthlysales';
 import { allSalesReportApi, deleteSalesReportApi, salesReportApi } from '../../service/allApi';
 import { serverUrl } from '../../service/serviceUrl';
 import { ToastContainer, toast } from 'react-toastify';
