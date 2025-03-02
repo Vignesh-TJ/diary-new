@@ -17,7 +17,7 @@ export default function AdminHome() {
         <div className="col-md-5">
     <Link to={'/adminhome'} style={{textDecoration:'none'}}>    <h1>Welcome User</h1></Link>
             <br />
-            <h4 className='text-secondary'>🌾 "May the sunrise bring you hope and joy, as you till the soil and nurture the seeds. May the gentle breeze carry your dreams across the fields, and may the harvest be bountiful and rewarding. Wishing you a day filled with hard work, peace, and fulfillment. Happy farming!" 🌞</h4>
+            <h4 className='text-black'>🌾 "May the sunrise bring you hope and joy, as you till the soil and nurture the seeds. May the gentle breeze carry your dreams across the fields, and may the harvest be bountiful and rewarding. Wishing you a day filled with hard work, peace, and fulfillment. Happy farming!" 🌞</h4>
         </div>
        </div>
     </div>
