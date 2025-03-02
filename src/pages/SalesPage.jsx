@@ -8,6 +8,7 @@ import { serverUrl } from '../../service/serviceUrl';
 import { ToastContainer, toast } from 'react-toastify';
 import SalesEdit from '../components/SalesEdit';
 import Footer from '../components/Footer';
+import Monthlysales from '../components/Monthlysales';
 
 function SalesPage() {
   const [token, setToken] = useState('');
@@ -158,7 +159,7 @@ function SalesPage() {
       </div>
 
       <div className='text-center'>
-        <Monthlysales />
+        <Monthlysales/>
       </div>
 
       {/* Modal for Sales Report Upload */}

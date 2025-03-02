@@ -47,7 +47,7 @@ function WokersPage() {
   const handlAdd = async () => {
     const reqBody = new FormData();
     reqBody.append('name', profile.name);
-    reqBody.append('id', profile.ids);
+    reqBody.append('ids', profile.ids);
     reqBody.append('joinDate', profile.joinDate);
     reqBody.append('profileImage', profile.profileImage);
 

@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 export default function AdminHome() {
   return (
     <>
-   <div className="container-fluid mains">
+   <div className="container-fluid mains mb-5">
     <Adminheader/>
     
     
@@ -59,7 +59,7 @@ export default function AdminHome() {
     
    </div>
  </div>
- <div className="container-fluid pt-5" style={{height:'100vh',background:'white'}}>
+ <div className="container-fluid pt-5 " style={{height:'100vh',background:'white',overflow:'scroll'}}>
   <div className="row p-5">
     <div className="col-md-6">
       <img src="https://akshayakalpa.org/wp-content/uploads/2021/01/sustainable-future@2x.png" height='620px' width='770px' alt="" />
@@ -75,7 +75,7 @@ export default function AdminHome() {
     </div>
   </div>
 </div>
-<Footer/>
+<Footer />
  </>
   )
 }

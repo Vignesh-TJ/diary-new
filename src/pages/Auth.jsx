@@ -32,7 +32,7 @@ function Auth() {
         toast.warning('incorrect email or password')
       }
       else{
-        toast.danger('something went wrong')
+        toast.warning('something went wrong')
       }
     }
   return (

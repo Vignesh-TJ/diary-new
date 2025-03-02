@@ -14,6 +14,18 @@ function Monthlysales() {
     feedback: "",
     imagesss: ""
   });
+  const handleCancel =()=>{
+ setSales({
+  months: "",
+  litre: "",
+  amount: "",
+  feedback: "",
+  imagesss: "",
+
+
+ }),
+ setPreview('')
+  }
 
   // Handle input changes dynamically
   const handleChange = (e) => {
@@ -42,6 +54,9 @@ function Monthlysales() {
 
     const result = await addMonthlySalesApi(reqBody, reqHeader);
     console.log(result);
+    if(result.status ==200){
+      handleCancel()
+    }
     setShow(false);
   };
 
