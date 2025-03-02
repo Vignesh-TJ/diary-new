@@ -19,6 +19,7 @@ function SalesPage() {
   const [totalLitres, setTotalLitres] = useState(0);
   const [grandTotal, setGrandTotal] = useState(0);
   const [resulting, setResulting] = useState("");
+  const [update,setupdate]=useState('')
 
   const calculateTotals = () => {
     const totalLitresCalc = salesList.reduce((total, sale) => total + Number(sale.litres), 0);
@@ -95,8 +96,7 @@ function SalesPage() {
 
   // Callback from SalesEdit: reload the page when a child update is received
   const handleEditResponse = (response) => {
-    console.log('Received update from SalesEdit:', response);
-    window.location.reload();
+   setupdate(response)
   };
 
   useEffect(() => {
@@ -104,7 +104,7 @@ function SalesPage() {
       setToken(sessionStorage.getItem('token'));
     }
     getSales();
-  }, [resulting, salesDetails]);
+  }, [resulting, salesDetails,update]);
 
   return (
     <div className="container-fluid" style={{ height: '100%', background: 'wheat' }}>
@@ -131,7 +131,9 @@ function SalesPage() {
               <tbody className='bg-white'>
                 {salesList.map((item, index) => (
                   <tr key={index}>
-                    <td className='p-3 border border-dark text-warning'>{item.date}</td>
+                <td className='p-3 border border-dark text-warning'>
+  {new Date(item.date).toLocaleDateString('en-GB')}
+</td>
                     <td className='p-3 border border-dark text-danger'>{item.litres} litres</td>
                     <td className='p-3 border border-dark d-flex justify-content-center'>
                       <img src={`${serverUrl}/upload/${item.images}`} style={{ height: '120px' }} alt="Sales" />

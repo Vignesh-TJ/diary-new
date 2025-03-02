@@ -19,6 +19,7 @@ function ExpensePage() {
   const [totalExpenses, setTotalExpenses] = useState(0); // Total number of products
   const [totalAmount, setTotalAmount] = useState(0); // Total expense amount
   const [status,setStatus]=useState(0)
+  const [update,setupdate]=useState('')
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -75,9 +76,7 @@ function ExpensePage() {
     }
   };
 
-  useEffect(() => {
-    fetchExpenses();
-  }, [status]);
+
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -92,9 +91,11 @@ function ExpensePage() {
 
   // Callback function to receive update response from ExpenseEdit child
   const handleEditResponse = (response) => {
-    console.log('Expense updated:', response);
-    window.location.reload(); // Reload the page when update is received
+   setupdate(response)
   };
+  useEffect(() => {
+    fetchExpenses();
+  }, [status,update]);
 
   return (
     <div className='bg-white'>
@@ -122,7 +123,9 @@ function ExpensePage() {
                   {expenses.length > 0 ? (
                     expenses.map((item, index) => (
                       <tr key={index}>
-                        <td className='p-3 border border-dark text-center text-warning'>{item.date}</td>
+                       <td className='p-3 border border-dark text-warning'>
+  {new Date(item.date).toLocaleDateString('en-GB')} {/* Format: DD/MM/YYYY */}
+</td>
                         <td className='p-3 border border-dark text-center text-danger'>{item.product}</td>
                         <td className='p-3 border border-dark d-flex justify-content-center'>
                           <img src={`${serverUrl}/upload/${item.image}`} style={{ height: '120px' }} alt="Product" />

@@ -23,7 +23,7 @@ export default function AdminHome() {
     </div>
 
    </div>
-   <div className="container-fluid d-flex justify-content-center  rain" style={{width:'100%',height:'100vh'}}>
+   <div className="container-fluid d-flex justify-content-center  rain" style={{width:'100%',height:'100%'}}>
    <div className="row ms-5  container px-5">
      <h2 className='text-black text-center mt-4' style={{fontSize:'50px',fontWeight:'800'}}>Products overview</h2>
      <div className="col-md-4 mt-3">
@@ -59,7 +59,7 @@ export default function AdminHome() {
     
    </div>
  </div>
- <div className="container-fluid pt-5 " style={{height:'100vh',background:'white',overflow:'scroll'}}>
+ <div className="container-fluid pt-5 " style={{height:'100%',background:'white'}}>
   <div className="row p-5">
     <div className="col-md-6">
       <img src="https://akshayakalpa.org/wp-content/uploads/2021/01/sustainable-future@2x.png" height='620px' width='770px' alt="" />

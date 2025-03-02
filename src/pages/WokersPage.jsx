@@ -17,6 +17,7 @@ function WokersPage() {
   const navigate = useNavigate();
   const [profileStatus, setProfileStatus] = useState('');
   const [preview, setPreview] = useState('');
+  const [update,setupdate]=useState('')
   const [attendenceDetails, setAttendenceDetails] = useState({
     date: "",
     idd: "",
@@ -91,8 +92,7 @@ function WokersPage() {
 
   // This callback receives response from the child and reloads the page.
   const handleEditResponse = (response) => {
-    console.log('Response from child:', response);
-    window.location.reload();
+  setupdate(response)
   };
 
   const deletion = (id) => {
@@ -102,7 +102,7 @@ function WokersPage() {
   useEffect(() => {
     gets();
     getProfile();
-  }, [attendenceDetails, profileStatus]);
+  }, [attendenceDetails, profileStatus,update]);
 
   // Helper functions to render dropdown title with icon and color
   const renderStatusTitle = () => {
@@ -139,7 +139,9 @@ function WokersPage() {
                   <hr />
                   <Card.Text>
                     <p className='text-center text-white'>Id: {item.ids}</p>
-                    <p className='text-center text-white'>Join date: {item.joinDate}</p>
+                    <td className='p-3  text-warning'>joinDate:   
+  {new Date(item.joinDate).toLocaleDateString('en-GB')} {/* Format: DD/MM/YYYY */}
+</td>
                   </Card.Text>
                   <hr />
                   <div className='text-center'>
@@ -173,7 +175,9 @@ function WokersPage() {
             <tbody className='bg-white'>
               {attendence?.map((item) => (
                 <tr key={item._id}>
-                  <td className='p-3 border border-dark text-center text-warning'>{item.date}</td>
+               <td className='p-3 border border-dark text-warning'>
+  {new Date(item.date).toLocaleDateString('en-GB')} {/* Format: DD/MM/YYYY */}
+</td>
                   <td className='p-3 border border-dark text-center text-danger'>{item.idd}</td>
                   <td className='p-3 border border-dark text-black'>{item.name}</td>
                   <td className='p-3 border border-dark text-center' 
